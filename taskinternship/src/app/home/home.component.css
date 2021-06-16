@@ -1,0 +1,14 @@
+div{
+    text-align: center;
+    margin-top:16%;
+    color: rgb(170, 167, 167);
+    font-family: 'Brush Script MT',' Brush Script Std', 'cursive';
+    font-size: 3em;
+}
+a{
+    text-decoration: none;
+    color:rgb(139, 79, 79);
+}
+a:hover{
+    color: rgb(170, 167, 167);
+}

@@ -1,0 +1,19 @@
+
+.div{
+    color: gray;
+    border: dotted 1px whitesmoke;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    position: fixed;
+    top: 25%;
+    left: 25%;
+    padding-left: 30px;
+}
+
+h1{
+    font-family: 'Brush Script MT',' Brush Script Std', 'cursive';
+    font-size: 3em;
+    text-align: center;
+}

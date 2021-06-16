@@ -1,0 +1,28 @@
+input{
+    text-decoration: none;
+    background-color: rgb(211, 209, 209);
+    color: black;
+
+}
+.div{
+    color: gray;
+    border: dotted 1px whitesmoke;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    /* position: fixed;
+    top: 25%;
+    left: 25%; */
+}
+input[type=submit]{
+    text-align: center;
+}
+h1{
+    font-family: 'Brush Script MT',' Brush Script Std', 'cursive';
+    font-size: 3em;
+}
+input[type=submit]:disabled{
+    text-align: center;
+    background-color: rgb(66, 47, 23);
+}

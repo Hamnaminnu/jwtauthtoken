@@ -1,0 +1,19 @@
+
+<div class="container div col-6">
+    <div class="row justify-content-center ">
+      <form class="col-6" #userlogin='ngForm' (ngSubmit)="check()"><h1>Login here</h1>
+        <div >
+          Username :
+          <input type="text" class="form-control" name="email" placeholder="Enter registered email" #email=ngModel [class.is-invalid]='email.invalid && email.touched' pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" [(ngModel)]="login.email" required>
+          <small class="text-danger" [class.d-none]="email.valid || email.touched"></small>
+        </div>
+        <div >
+          Password : 
+          <input type="password" class="form-control" name="password" placeholder="Enter password"  #password=ngModel [class.is-invalid]='password.invalid && password.touched' pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" [(ngModel)]="login.password" required>
+          <small class="text-danger" [class.d-none]="password.valid || password.touched"></small>
+        </div>
+        <br>
+         <input type="submit" [disabled]='userlogin.form.invalid' value="ok">
+      </form>   
+    </div>  
+  </div>

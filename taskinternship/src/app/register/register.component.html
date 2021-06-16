@@ -1,0 +1,47 @@
+
+<div class="container div col-6">
+    <div class="row justify-content-center ">
+      <form class="col-6" #userregister='ngForm' (ngSubmit)="Adddata()">
+        <div ><h1>Register here</h1>
+            Firstname :
+            <input type="text" class="form-control" name="firstname"  required placeholder="Enter firstname" [(ngModel)]="User.firstname">
+        </div>
+        <div >
+            Lastname :
+            <input type="text" class="form-control" name="lastname"  required placeholder="Enter lastname" [(ngModel)]="User.lastname">
+        </div>
+        <div >
+            Email :
+            <input type="text" class="form-control" name='email'  #email=ngModel [class.is-invalid]='email.invalid && email.touched' pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required placeholder="Enter email" [(ngModel)]="User.email">
+            <small class="text-danger" [class.d-none]="email.valid || email.touched"></small>
+        </div>
+        <div >
+            Mobile number:
+            <input type="text" class="form-control" name="number" required minlength="10" placeholder="Enter mobile number" [(ngModel)]="User.number">
+        </div>
+        <div >
+            Date of birth :
+            <input type="text" class="form-control" name="date" required pattern="\d{1,2}/\d{1,2}/\d{4}" placeholder="mm/dd/yyyy" [(ngModel)]="User.date">
+        </div>
+        <div >
+            City :
+            <input type="text" class="form-control" name="city" required placeholder="Enter city" [(ngModel)]="User.city">
+        </div>
+        <div >
+            State :
+            <input type="text" class="form-control" name="state" required placeholder="Enter state" [(ngModel)]="User.state">
+        </div>
+        <div >
+            Pincode :
+            <input type="text" class="form-control" name='pincode' placeholder="Enter pincode" required minlength="6" [(ngModel)]="User.pincode">
+        </div>
+        <div>
+          Password : 
+          <input type="password" class="form-control"  required #password=ngModel [class.is-invalid]='password.invalid && password.touched' pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" name="password" placeholder="Enter password" [(ngModel)]="User.password">
+          <small class="text-danger" [class.d-none]="password.valid || password.touched"></small>
+        </div>
+        <br>
+         <input type="submit" [disabled]='userregister.form.invalid' value="Done">
+      </form>   
+    </div>  
+  </div>
